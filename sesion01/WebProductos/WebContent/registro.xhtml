@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<title>Introducción a JSF</title>
+	<link
+		href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Ubuntu+Condensed'
+		rel='stylesheet' type='text/css' />
+</h:head>
+<h:body>
+	<h:form>
+	<p:panelGrid  columns="2">
+		<p:outputLabel 	value="Nombre"/>
+		<p:inputText 	value="#{productoMB.producto.nombre}" 
+						placeholder="Nombre.."/>
+	
+		<p:outputLabel 	value="Precio"/>
+		<p:inputText 	value="#{productoMB.producto.precio}"
+						placeholder="Precio.."/>
+	
+		<p:outputLabel 	value="Stock"/>
+		<p:inputText 	value="#{productoMB.producto.stock}"
+						placeholder="Stock.."/>
+	
+		<p:commandButton value="Registrar"
+						 action="#{productoMB.registrar()}"	/>
+			
+		<p:commandButton value="Cancelar"/>
+	</p:panelGrid>
+</h:form>	
+</h:body>
+</html>
